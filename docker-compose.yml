@@ -1,0 +1,58 @@
+version: '3'
+
+services:
+  db:
+    image: mariadb:10.4
+    container_name: mariadb
+    environment:
+      MARIADB_ROOT_PASSWORD: root_password
+      MARIADB_DATABASE: magento
+      MARIADB_USER: magento
+      MARIADB_PASSWORD: magento
+    networks:
+      - backend
+  elastic:
+    image: elasticsearch:7.16.2
+    container_name: elasticsearch
+    ports:
+      - 9200:9200
+      - 9300:9300
+    environment:
+      - "discovery.type=single-node"
+      - ES_JAVA_OPTS=-Xms750m -Xmx750m
+    networks:
+      - backend
+  web:
+    image: ataberkylmz/magento2:2.4.4
+    container_name: magento2-container
+    extra_hosts:
+      - "magento2.test.com:127.0.0.1"
+    environment:
+      DB_SERVER: mariadb
+      ELASTICSEARCH_SERVER: elasticsearch
+      MAGENTO_HOST: ${GP_URL}
+      VIRTUAL_HOST: ${GP_URL}
+      ADMIN_USERNAME: admin
+      ADMIN_PASSWORD: 123123qa
+      USE_SSL: 1
+      DEPLOY_SAMPLEDATA: 1
+    ports:
+      - 8080:80
+    depends_on:
+      - db
+      - elastic
+    networks:
+      backend:
+        aliases:
+          - magento2.test.com
+  playwright:
+    image: mcr.microsoft.com/playwright:v1.20.0-focal
+    networks:
+      - backend
+    environment:
+      - INTEGRATION_TESTS_BRANCH
+      - MAGENTO_BASE_URL
+      - PAYPAL_USERNAME
+      - PAYPAL_PASSWORD
+networks:
+  backend:

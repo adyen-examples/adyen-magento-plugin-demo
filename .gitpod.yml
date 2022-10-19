@@ -1,0 +1,16 @@
+tasks:
+  - command: |
+      export GP_URL=`gp url 8080 | sed 's~https://~~'`
+      docker-compose up
+
+ports:
+  - port: 8080
+    onOpen: open-browser
+  - port: 9200
+    onOpen: ignore
+  - port: 9300
+    onOpen: ignore
+
+vscode:
+  extensions:
+    - ms-azuretools.vscode-docker
