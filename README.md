@@ -1,6 +1,6 @@
-# Adyen [online payment](https://docs.adyen.com/checkout) integration demos
+# Adyen [Magento Plugins](https://docs.adyen.com/checkout) integration demo
 
-## Run this integration in seconds using [Gitpod](https://gitpod.io/)
+## Run this preconfigured docker image in seconds using [Gitpod](https://gitpod.io/)
 
 * Open your [Adyen Test Account](https://ca-test.adyen.com/ca/ca/overview/default.shtml) and create a set of [API keys](https://docs.adyen.com/user-management/how-to-get-the-api-key).
 * Go to [gitpod account variables](https://gitpod.io/variables).
@@ -9,3 +9,5 @@
 * Click the button below!
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adyen-examples/adyen-magento-plugin)
+
+_NOTE: To allow the Adyen Drop-In and Components to load, you have to add `https://*.gitpod.io` as allowed origin for your chosen set of [API Credentials](https://ca-test.adyen.com/ca/ca/config/api_credentials_new.shtml)_
