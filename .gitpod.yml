@@ -1,9 +1,7 @@
 tasks:
   - command: |
       export GP_URL=`gp url 8080 | sed 's~https://~~'`
-      docker-compose up -d
-      sleep 120
-      ./install.sh
+      docker-compose up
 
 ports:
   - port: 8080
