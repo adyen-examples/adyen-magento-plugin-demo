@@ -6,7 +6,7 @@
 * Go to [gitpod account variables](https://gitpod.io/variables).
 * Set the `ADYEN_API_KEY`, `ADYEN_CLIENT_KEY`, `ADYEN_HMAC_KEY` and `ADYEN_MERCHANT_ACCOUNT` variables.
 
-* Click the button below!
+* Click the button below and wait at least 100s before the next step!
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adyen-examples/adyen-magento-plugin)
 
