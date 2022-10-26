@@ -45,14 +45,5 @@ services:
       backend:
         aliases:
           - magento2.test.com
-  playwright:
-    image: mcr.microsoft.com/playwright:v1.20.0-focal
-    networks:
-      - backend
-    environment:
-      - INTEGRATION_TESTS_BRANCH
-      - MAGENTO_BASE_URL
-      - PAYPAL_USERNAME
-      - PAYPAL_PASSWORD
 networks:
   backend:
