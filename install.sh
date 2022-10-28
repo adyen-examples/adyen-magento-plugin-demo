@@ -29,7 +29,7 @@ docker exec magento2-container bin/magento config:set payment/adyen_abstract/dem
 docker exec magento2-container bin/magento config:set payment/adyen_hpp/active 1
 docker exec magento2-container bin/magento config:set payment/adyen_cc/active 1
 docker exec magento2-container bin/magento config:set payment/adyen_oneclick/active 1
-docker exec magento2-container bin/magento config:set payment/adyen_abstract/merchant_account "${ADYEN_MERCHANT}"
+docker exec magento2-container bin/magento config:set payment/adyen_abstract/merchant_account "${ADYEN_MERCHANT_ACCOUNT}"
 docker exec magento2-container ./n98-magerun2.phar config:store:set --encrypt payment/adyen_abstract/api_key_test "${ADYEN_API_KEY}" > /dev/null
 docker exec magento2-container bin/magento config:set payment/adyen_abstract/client_key_test "${ADYEN_CLIENT_KEY}"
 
