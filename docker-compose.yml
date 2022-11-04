@@ -32,6 +32,7 @@ services:
       VIRTUAL_HOST: ${GP_URL}
       ADMIN_USERNAME: admin
       ADMIN_PASSWORD: 123123qa
+      USE_SSL: 1
       DEPLOY_SAMPLEDATA: 1
     ports:
       - 8080:80
