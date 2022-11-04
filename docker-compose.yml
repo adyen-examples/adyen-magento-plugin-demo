@@ -25,8 +25,6 @@ services:
   web:
     image: ataberkylmz/magento2:2.4.4
     container_name: magento2-container
-    extra_hosts:
-      - "magento2.test.com:127.0.0.1"
     environment:
       DB_SERVER: mariadb
       ELASTICSEARCH_SERVER: elasticsearch
@@ -34,7 +32,6 @@ services:
       VIRTUAL_HOST: ${GP_URL}
       ADMIN_USERNAME: admin
       ADMIN_PASSWORD: 123123qa
-      USE_SSL: 1
       DEPLOY_SAMPLEDATA: 1
     ports:
       - 8080:80
@@ -43,7 +40,5 @@ services:
       - elastic
     networks:
       backend:
-        aliases:
-          - magento2.test.com
 networks:
   backend:
