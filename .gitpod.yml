@@ -1,6 +1,6 @@
 tasks:
   - command: |
-      export GP_URL=`gp url 8080 | sed 's~https://~~'`
+      export APP_URL=`gp url 8080 | sed 's~https://~~'`
       docker-compose up
 
 ports:
