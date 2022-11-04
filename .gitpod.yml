@@ -5,7 +5,7 @@ tasks:
 
 ports:
   - port: 8080
-    onOpen: open-browser
+    onOpen: open-preview
   - port: 9200
     onOpen: ignore
   - port: 9300
