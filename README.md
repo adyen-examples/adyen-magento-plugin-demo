@@ -51,7 +51,7 @@ docker-compose up
 ## Usage
 
 1. Visit shop page http://localhost:8080
-2. Login to the admin dashboard (http://localhost:8080/admin/) to configure the installed plugin with your [API keys](https://docs.adyen.com/user-management/how-to-get-the-api-key).. You can find the default login details in the `docker-compose.yml file`
+2. Login to the admin dashboard (http://localhost:8080/admin/) to configure the installed plugin with your [API keys](https://docs.adyen.com/user-management/how-to-get-the-api-key).. You can find the default login details in the `docker-compose.yml` file.
 
 Remember to include `http://localhost:8080` in the list of Allowed Origins
 
