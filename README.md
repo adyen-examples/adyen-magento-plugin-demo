@@ -1,4 +1,4 @@
-# Adyen [Magento Plugins](https://docs.adyen.com/checkout) integration demo
+# Adyen [Magento Plugins](https://docs.adyen.com/plugins/magento-2) integration demo
 
 ## Run this preconfigured docker image of Magento in seconds using [Gitpod](https://gitpod.io/)
 
@@ -6,7 +6,7 @@
 * Go to [gitpod account variables](https://gitpod.io/variables).
 * Set the `ADYEN_API_KEY`, `ADYEN_CLIENT_KEY`, `ADYEN_HMAC_KEY` and `ADYEN_MERCHANT_ACCOUNT` variables.
 
-* Click the button below and wait at least 150s before the next step!
+* Click the button below and wait at least 150s (make sure the docker process is completed) before the next step!
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adyen-examples/adyen-magento-plugin)
 
