@@ -1,6 +1,6 @@
 # Adyen [Magento 2 Plugin](https://docs.adyen.com/plugins/magento-2) integration demo
 
-In this demo, you can spin up a Magento instance and install the Adyen plugin to see how an integration works. It gives your shoppers the option to pay with their preferred payment method in a seamless checkout experience. You can try this deom both online or on your computer.
+In this demo, you can spin up a Magento instance and install the Adyen plugin to see how an integration works. It gives your shoppers the option to pay with their preferred payment method in a seamless checkout experience. You can try this demo both online or on your computer.
 
 ## Running online with [Gitpod](https://gitpod.io/)
 
