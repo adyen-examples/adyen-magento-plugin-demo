@@ -14,6 +14,9 @@ In this demo, you can spin up a Magento instance and install the Adyen plugin to
 * Open a new Terminal in the current directory and run `./install.sh` to install and configure the plugin
 * Visit your shop on the generated Gitpod subdomain
 
+* Visit `https://*.gitpod/admin/` and login to see that the Magento Plugin is installed correctly.
+You can find the default login details under `ADMIN_USERNAME` and `ADMIN_PASSWORD` in the `docker-compose.yml` file.
+
 _NOTE: To allow the Adyen Drop-In and Components to load, you have to add `https://*.gitpod.io` as allowed origin for your chosen set of [API Credentials](https://ca-test.adyen.com/ca/ca/config/api_credentials_new.shtml)_
 
 ## Running locally
@@ -53,7 +56,7 @@ docker-compose up
 ### Usage
 
 1. Visit shop page http://localhost:8080
-2. Login to the admin dashboard (http://localhost:8080/admin/) to configure your [API keys](https://docs.adyen.com/user-management/how-to-get-the-api-key). You can find the default login details in the `docker-compose.yml` file.
+2. Login to the admin dashboard (http://localhost:8080/admin/) to configure your [API keys](https://docs.adyen.com/user-management/how-to-get-the-api-key). You can find the default login details under `ADMIN_USERNAME` and `ADMIN_PASSWORD` in the `docker-compose.yml` file.
 
 Remember to include `http://localhost:8080` in the list of Allowed Origins on the Customer Area.
 
