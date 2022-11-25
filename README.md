@@ -9,7 +9,7 @@ In this demo, you can spin up a Magento instance and install the Adyen plugin to
 * Set the `ADYEN_API_KEY`, `ADYEN_CLIENT_KEY` and `ADYEN_MERCHANT_ACCOUNT` variables (Scope: `adyen-examples/*`).
 * Click the button below and **wait ~350s** (for the Magento installation). You should have `magento2-container  | Starting periodic command scheduler: cron.` before proceeding to next step.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adyen-examples/adyen-magento-plugin)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adyen-examples/adyen-magento-plugin-demo)
 
 * Open a new Terminal in the current directory and run `./install.sh` to install and configure the plugin
 * Visit your shop on the generated Gitpod subdomain
@@ -32,7 +32,7 @@ If you don't want to run this demo online, then follow these steps.
 1. Clone this repo:
 
 ```
-git clone https://github.com/adyen-examples/adyen-magento-plugin.git
+git clone https://github.com/adyen-examples/adyen-magento-plugin-demo.git
 ```
 
 2. Navigate to the root directory, set `APP_URL` and port. You can use your preferred port:
