@@ -14,7 +14,7 @@ In this demo, you can spin up a Magento instance and install the Adyen plugin to
 
 4. Open a new Terminal in the current directory and run `./install.sh` to install and configure the plugin
 5. Visit your shop on the generated Gitpod subdomain
-6. Visit `previewURL/admin/` and login to see that the Magento Plugin is installed correctly.
+6. Visit `*.gitpod.io/admin/` and login to see that the Magento Plugin is installed correctly.
 You can find the default login details under `ADMIN_USERNAME` and `ADMIN_PASSWORD` in the `docker-compose.yml` file.
 7. You can see the GitPod account variables which are automatically set in **Step 2** above, visit `Stores` → `Configuration` → `Sales (submenu)` → `Payment Methods` → `Other Payment Methods` → `Adyen Payments` → `Required Settings`.
 
