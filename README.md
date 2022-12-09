@@ -8,17 +8,17 @@ In this demo, you can spin up a Magento instance and install the Adyen plugin to
 2. > __Note__ _Step 2 is optional, you can skip to step 3 if you would like to manually input your API Keys in the Magento Admin Dashboard_ 
  - _Go to [gitpod account variables](https://gitpod.io/variables)_
  - _Set the `ADYEN_API_KEY`, `ADYEN_CLIENT_KEY` and `ADYEN_MERCHANT_ACCOUNT` variables (Scope: `adyen-examples/*`)._
-3. Click the button below and **wait ~300s** (for the Magento installation). You should have `magento2-container  | Starting periodic command scheduler: cron.` before proceeding to next step.
+3. Click the button below and **wait ~260s (4 minutes)** (for the Magento installation). You should have `magento2-container  | Starting periodic command scheduler: cron.` before proceeding to next step.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adyen-examples/adyen-magento-plugin-demo)
 
-4. Open a new Terminal in the current directory and run `./install.sh` to install and configure the plugin
-5. Visit your shop on the generated Gitpod subdomain
-6. Visit `*.gitpod.io/admin/` and login to see that the Magento Plugin is installed correctly.
-You can find the default login details under `ADMIN_USERNAME` and `ADMIN_PASSWORD` in the `docker-compose.yml` file.
+4. Open a new Terminal in the current directory and run `./install.sh` to install and configure the Adyen payment plugin.
+5. Visit your shop on the generated preview URL
+6. Visit `previewURL/admin/` and login to see that the Magento Plugin is installed correctly.
+You can find the default login details under `ADMIN_USERNAME` and `ADMIN_PASSWORD` in the **[docker-compose.yml](https://github.com/adyen-examples/adyen-magento-plugin-demo/blob/dabb8fe7c1e0de497a07dc8c24257a9085c88783/docker-compose.yml#L33)** file.
 7. You can see the GitPod account variables which are automatically set in **Step 2** above, visit `Stores` → `Configuration` → `Sales (submenu)` → `Payment Methods` → `Other Payment Methods` → `Adyen Payments` → `Required Settings`.
 
-_NOTE: To allow the Adyen Drop-In and Components to load, you have to add `https://*.gitpod.io` as allowed origin for your chosen set of [API Credentials](https://ca-test.adyen.com/ca/ca/config/api_credentials_new.shtml)_
+_NOTE: To allow the Adyen Drop-In and Components to load, you have to add `https://*.gitpod.io` as allowed origin for your chosen set of [API Credentials](https://ca-test.adyen.com/ca/ca/config/api_credentials_new.shtml)._
 
 ## Running locally
 
