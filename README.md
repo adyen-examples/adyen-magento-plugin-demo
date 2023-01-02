@@ -20,6 +20,8 @@ You can find the default login details under `ADMIN_USERNAME` and `ADMIN_PASSWOR
 
 _NOTE: To allow the Adyen Drop-In and Components to load, you have to add `https://*.gitpod.io` as allowed origin for your chosen set of [API Credentials](https://ca-test.adyen.com/ca/ca/config/api_credentials_new.shtml)._
 
+![Checkout demo](public/images/checkout_demo.gif)
+
 ## Running locally
 
 If you don't want to run this demo online, then follow these steps.
