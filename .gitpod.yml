@@ -1,8 +1,6 @@
 tasks:
   - command: |
       export APP_URL=`gp url 8080 | sed 's~https://~~'`
-      export ADMIN_USERNAME = "${ADMIN_USERNAME}"
-      export ADMIN_PASSWORD = "${ADMIN_PASSWORD}"
       docker-compose up
 
 ports:
