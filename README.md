@@ -5,7 +5,7 @@ In this demo, you can spin up a Magento instance and install the Adyen plugin to
 ## Running online with [Gitpod](https://gitpod.io/)
 
 1. Open your [Adyen Test Account](https://ca-test.adyen.com/ca/ca/overview/default.shtml) and create a set of [API keys](https://docs.adyen.com/user-management/how-to-get-the-api-key).
-2a. 
+2. 
  - Go to [gitpod account variables](https://gitpod.io/variables)
  - Set the `ADYEN_API_KEY`, `ADYEN_CLIENT_KEY` and `ADYEN_MERCHANT_ACCOUNT` `ADMIN_USERNAME` and `ADMIN_` variables (Scope: `adyen-examples/*`).
  - Create your login variables `ADMIN_USERNAME` and `ADMIN_PASSWORD` to access the magento admin dashboard. (Scope: `adyen-examples/*`).
@@ -18,7 +18,7 @@ In this demo, you can spin up a Magento instance and install the Adyen plugin to
 4. Open a new Terminal in the current directory and run `./install.sh` to install and configure the Adyen payment plugin.
 5. Visit your shop on the generated preview URL
 6. Visit `previewURL/admin/` and login to see that the Magento Plugin is installed correctly.
-You can find the default login details under `ADMIN_USERNAME` and `ADMIN_PASSWORD` in the **[docker-compose.yml](https://github.com/adyen-examples/adyen-magento-plugin-demo/blob/dabb8fe7c1e0de497a07dc8c24257a9085c88783/docker-compose.yml#L33)** file.
+Login using the `ADMIN_USERNAME` and `ADMIN_PASSWORD` you created in step 2 above.
 7. You can see the GitPod account variables which are automatically set in **Step 2** above, visit `Stores` → `Configuration` → `Sales (submenu)` → `Payment Methods` → `Other Payment Methods` → `Adyen Payments` → `Required Settings`.
 
 _NOTE: To allow the Adyen Drop-In and Components to load, you have to add `https://*.gitpod.io` as allowed origin for your chosen set of [API Credentials](https://ca-test.adyen.com/ca/ca/config/api_credentials_new.shtml)._
