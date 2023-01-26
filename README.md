@@ -9,7 +9,7 @@ In this demo, you can spin up a Magento instance and install the Adyen plugin to
  - Go to [gitpod account variables](https://gitpod.io/variables)
  - Set the `ADYEN_API_KEY`, `ADYEN_CLIENT_KEY` and `ADYEN_MERCHANT_ACCOUNT` `ADMIN_USERNAME` and `ADMIN_` variables (Scope: `adyen-examples/*`).
  - Create your login variables `ADMIN_USERNAME` and `ADMIN_PASSWORD` to access the magento admin dashboard. (Scope: `adyen-examples/*`).
- > __Note__ `ADMIN_PASSWORD` must contain both alphabelt and number.   
+ > __Note__ `ADMIN_PASSWORD` must contain both alphabelt and number (Magento requirement).   
  
 3. Click the button below and **wait ~260s (4 minutes)** (for the Magento installation). You should have `magento2-container  | Starting periodic command scheduler: cron.` before proceeding to next step.
 
