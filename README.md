@@ -1,13 +1,13 @@
 # Adyen [Magento 2 Plugin](https://docs.adyen.com/plugins/magento-2) integration demo
 
-In this demo, you can spin up a Magento instance and install the Adyen plugin to see how an integration works. It gives your shoppers the option to pay with their preferred payment method in a seamless checkout experience. You can try this demo both online or on your computer.
+In this demo, you can spin up a Magento instance and install the Adyen plugin to see how the Adyen Payment plugin works. You can try this demo online in one click using Gitpod (no local installation/dependencies) or locally on your computer using Docker.
 
 ## Running online with [Gitpod](https://gitpod.io/)
 
 1. Open your [Adyen Test Account](https://ca-test.adyen.com/ca/ca/overview/default.shtml) and create a set of [API keys](https://docs.adyen.com/user-management/how-to-get-the-api-key).
 2. 
  - Go to [gitpod account variables](https://gitpod.io/variables)
- - Set the `ADYEN_API_KEY`, `ADYEN_CLIENT_KEY` and `ADYEN_MERCHANT_ACCOUNT` `ADMIN_USERNAME` and `ADMIN_` variables (Scope: `adyen-examples/*`).
+ - Set the `ADYEN_API_KEY`, `ADYEN_CLIENT_KEY` and `ADYEN_MERCHANT_ACCOUNT` variables (Scope: `adyen-examples/*`).
  - Create your login variables `ADMIN_USERNAME` and `ADMIN_PASSWORD` to access the magento admin dashboard. (Scope: `adyen-examples/*`).
  > __Note__ `ADMIN_PASSWORD` must contain both alphabelt and number (Magento requirement).   
  
