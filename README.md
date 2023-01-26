@@ -1,6 +1,6 @@
 # Adyen [Magento 2 Plugin](https://docs.adyen.com/plugins/magento-2) integration demo
 
-In this demo, you can spin up a Magento instance and install the Adyen plugin to see how the Adyen Payment plugin works. You can try this demo online in one click using Gitpod (no local installation/dependencies) or locally on your computer using Docker.
+In this demo, you can spin up a Magento instance and install the Adyen Payment plugin to see how it works. You can try this demo online in one click using Gitpod (no local installation/dependencies) or locally on your computer using Docker.
 
 ## Running online with [Gitpod](https://gitpod.io/)
 
