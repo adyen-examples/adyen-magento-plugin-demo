@@ -1,6 +1,6 @@
 # Adyen [Magento 2 Plugin](https://docs.adyen.com/plugins/magento-2) integration demo
 
-In this demo, you can spin up a Magento instance and install the [Adyen Payment plugin](https://marketplace.magento.com/adyen-module-payment.html) to see how it works. You can try this demo online in one click using Gitpod (no local installation/dependencies) or locally on your computer using Docker.
+In this demo, you can spin up a Magento instance and install the [Adyen Payment plugin](https://marketplace.magento.com/adyen-module-payment.html) to see how it works. You can try this demo online in one click using Gitpod (a remote IDE) or locally on your computer using Docker.
 
 ## Running online with [Gitpod](https://gitpod.io/)
 
@@ -8,8 +8,8 @@ In this demo, you can spin up a Magento instance and install the [Adyen Payment 
 2. 
  - Go to [gitpod account variables](https://gitpod.io/variables)
  - Set the `ADYEN_API_KEY`, `ADYEN_CLIENT_KEY` and `ADYEN_MERCHANT_ACCOUNT` variables (Scope: `adyen-examples/*`).
- - Create your login variables `ADMIN_USERNAME` and `ADMIN_PASSWORD` to access the magento admin dashboard. (Scope: `adyen-examples/*`).
- > __Note__ `ADMIN_PASSWORD` must contain both alphabelt and number (Magento requirement).   
+ - Set `ADMIN_USERNAME` and `ADMIN_PASSWORD` in the Gitpod account variables as well. These will be used as your login credentials in the Magento admin dashboard. (Scope: `adyen-examples/*`).
+ > __Note__ `ADMIN_PASSWORD` must contain alphanumeric characters (Magento requirement).   
  
 3. Click the button below and **wait ~260s (4 minutes)** (for the Magento installation). You should have `magento2-container  | Starting periodic command scheduler: cron.` before proceeding to next step.
 
