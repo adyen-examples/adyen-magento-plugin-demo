@@ -3,7 +3,7 @@
 In this demo, you can spin up a Magento instance and install the [Adyen Payment plugin](https://marketplace.magento.com/adyen-module-payment.html) to see how it works. You can try this demo online in one click using Gitpod (a remote IDE) or locally on your computer using Docker.
 
 ## Demo [Video](https://youtu.be/taqI7cp7OmM)
-[![Demo Video](https://img.youtube.com/vi/taqI7cp7OmM/0.jpg)](https://youtu.be/taqI7cp7OmM)
+[![Demo Video](https://img.youtube.com/vi/taqI7cp7OmM/sddefault.jpg)](https://youtu.be/taqI7cp7OmM)
 
 
 ## Running online with [Gitpod](https://gitpod.io/)
