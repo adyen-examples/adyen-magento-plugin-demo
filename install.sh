@@ -8,7 +8,7 @@ docker exec magento2-container chmod +x ./n98-magerun2.phar
 docker exec magento2-container bin/magento deploy:mode:set developer
 
 # Install latest release 
-docker exec magento2-container composer require adyen/module-payment
+docker exec magento2-container composer require adyen/module-payment:"${MAGENTO_PLUGIN_VERSION}"
 
 # Enable module
 docker exec magento2-container bin/magento module:enable Adyen_Payment
