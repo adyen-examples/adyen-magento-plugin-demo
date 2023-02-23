@@ -12,6 +12,7 @@ In this demo, you can spin up a Magento instance and install the [Adyen Payment 
 2. 
  - Go to [gitpod account variables](https://gitpod.io/variables)
  - Set the `ADYEN_API_KEY`, `ADYEN_CLIENT_KEY` and `ADYEN_MERCHANT_ACCOUNT` variables (Scope: `adyen-examples/*`).
+ - Set the `MAGENTO_PLUGIN_VERSION` to the [plugin version](https://github.com/Adyen/adyen-magento2/tags) you want to install. (Scope: `adyen-examples/*`)
  - Set `ADMIN_USERNAME` and `ADMIN_PASSWORD` in the Gitpod account variables as well. These will be used as your login credentials in the Magento admin dashboard. (Scope: `adyen-examples/*`).
  > __Note__ `ADMIN_PASSWORD` must contain alphanumeric characters (Magento requirement).   
  
