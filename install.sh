@@ -43,3 +43,5 @@ docker exec magento2-container find var generated vendor pub/static pub/media ap
 docker exec magento2-container find var generated vendor pub/static pub/media app/etc /var/www/sample-data -type d -exec chmod g+ws {} +
 docker exec magento2-container chown -R www-data:www-data . /var/www/sample-data
 docker exec magento2-container chmod u+x bin/magento
+
+while true; do <echo “hello">; sleep <1200>; done
