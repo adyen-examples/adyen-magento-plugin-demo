@@ -36,7 +36,7 @@ docker exec magento2-container bin/magento cache:flush
 
 # Crontab
 docker exec magento2-container crontab -r
-docker exec -u www-data magento2-container bin/magento cron:install
+docker exec magento2-container bin/magento cron:install
 
 # Setup permissions
 docker exec magento2-container find var generated vendor pub/static pub/media app/etc /var/www/sample-data -type f -exec chmod g+w {} +
