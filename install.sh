@@ -8,7 +8,7 @@ docker exec magento2-container chmod +x ./n98-magerun2.phar
 docker exec magento2-container bin/magento deploy:mode:set developer
 
 # Install latest release 
-docker exec magento2-container composer require adyen/module-payment:"${MAGENTO_PLUGIN_VERSION}"
+docker exec magento2-container composer require adyen/module-payment
 
 # Enable module
 docker exec magento2-container bin/magento module:enable Adyen_Payment
@@ -18,6 +18,9 @@ docker exec magento2-container bin/magento setup:upgrade
 
 # Generate code
 docker exec magento2-container bin/magento setup:di:compile
+
+docker exec magento2-container chmod -R 777 vendor/adyen
+docker exec magento2-container chmod -R 777 var/cache
 
 # Clear cache
 docker exec magento2-container bin/magento cache:flush
@@ -44,17 +47,12 @@ docker exec magento2-container chmod u+x bin/magento
 # Clear cache
 docker exec magento2-container bin/magento cache:flush
 
-a2enmod headers
-
 docker cp ./apache2.conf magento2-container:../../../etc/apache2/apache2.conf
-docker cp .htaccess magento2-container:pub/.htaccess
+docker cp .htaccess magento2-container:/var/www/html/pub/.htaccess
 
-docker exec -it magento2-container /bin/bash
+docker exec  magento2-container a2enmod headers
 
-chmod -R 777 vendor/adyen
-chmod -R 777 var/cache
-
-service apache2 reload
+docker exec magento2-container service apache2 reload
 
 exit
 while true 
