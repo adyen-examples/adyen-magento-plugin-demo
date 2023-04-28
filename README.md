@@ -17,7 +17,7 @@ In this demo, you can spin up a Magento instance and install the [Adyen Payment 
  
 3. Click the button below and **wait ~260s (4 minutes)** (for the Magento installation). You should have `magento2-container  | Starting periodic command scheduler: cron.` before proceeding to next step.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adyen-examples/adyen-magento-plugin-demo)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adyen-examples/adyen-magento-plugin-demo/tree/headless-example)
 
 4. Open a new Terminal in the current directory and run `./install.sh` to install and configure the Adyen payment plugin.
 5. Visit your shop on the generated preview URL
