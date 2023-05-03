@@ -47,7 +47,7 @@ docker exec magento2-container chmod u+x bin/magento
 # Clear cache
 docker exec magento2-container bin/magento cache:flush
 
-docker cp ./apache2.conf magento2-container:../../../etc/apache2/apache2.conf
+docker cp ./apache2.config magento2-container:../../../etc/apache2/apache2.conf
 docker cp .htaccess magento2-container:/var/www/html/pub/.htaccess
 
 docker exec  magento2-container a2enmod headers
