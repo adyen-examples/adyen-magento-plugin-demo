@@ -43,8 +43,3 @@ docker exec magento2-container chmod u+x bin/magento
 
 # Clear cache
 docker exec magento2-container bin/magento cache:flush
-
-while true 
-do echo “hello“
-sleep 1200 
-done
