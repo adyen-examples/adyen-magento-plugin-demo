@@ -13,11 +13,22 @@ docker exec magento2-container composer require adyen/module-payment
 # Enable module
 docker exec magento2-container bin/magento module:enable Adyen_Payment
 
+
 # Setup upgrade
 docker exec magento2-container bin/magento setup:upgrade
 
 # Generate code
 docker exec magento2-container bin/magento setup:di:compile
+
+# Clear cache
+docker exec magento2-container bin/magento cache:flush
+
+# Install Express Checkout
+docker exec magento2-container composer require adyen/adyen-magento2-expresscheckout
+docker exec magento2-container bin/magento module:enable Adyen_ExpressCheckout
+
+# Setup upgrade
+docker exec magento2-container bin/magento setup:upgrade
 
 # Clear cache
 docker exec magento2-container bin/magento cache:flush
@@ -30,6 +41,10 @@ docker exec magento2-container bin/magento config:set payment/adyen_oneclick/act
 docker exec magento2-container bin/magento config:set payment/adyen_abstract/merchant_account "${ADYEN_MERCHANT_ACCOUNT}"
 docker exec magento2-container ./n98-magerun2.phar config:store:set --encrypt payment/adyen_abstract/api_key_test "${ADYEN_API_KEY}" > /dev/null
 docker exec magento2-container bin/magento config:set payment/adyen_abstract/client_key_test "${ADYEN_CLIENT_KEY}"
+
+# Configure Express checkout module
+docker exec magento2-container bin/magento config:set payment/adyen_hpp/show_google_pay_on "1,2,3"
+docker exec magento2-container bin/magento config:set payment/adyen_hpp/show_apple_pay_on "1,2,3"
 
 # Clear cache
 docker exec magento2-container bin/magento cache:flush
