@@ -28,6 +28,7 @@ docker exec magento2-container bin/magento setup:upgrade
 
 # Configure the plugin
 docker exec magento2-container bin/magento config:set payment/adyen_abstract/demo_mode 1
+docker exec magento2-container bin/magento config:set payment/adyen_abstract/payment_methods_active 1
 docker exec magento2-container bin/magento adyen:enablepaymentmethods:run
 docker exec magento2-container bin/magento config:set payment/adyen_abstract/has_holder_name 1
 docker exec magento2-container bin/magento config:set payment/adyen_abstract/merchant_account "${ADYEN_MERCHANT_ACCOUNT}"
@@ -36,6 +37,9 @@ docker exec magento2-container bin/magento config:set payment/adyen_abstract/cli
 
 # Clear cache
 docker exec magento2-container bin/magento cache:flush
+
+# Setup upgrade
+docker exec magento2-container bin/magento setup:upgrade
 
 # Install Express Checkout
 docker exec magento2-container composer require adyen/adyen-magento2-expresscheckout
