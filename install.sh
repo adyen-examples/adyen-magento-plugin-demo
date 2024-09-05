@@ -45,8 +45,8 @@ docker exec magento2-container bin/magento module:enable Adyen_ExpressCheckout
 docker exec magento2-container bin/magento setup:upgrade
 
 # Configure Express checkout module
-docker exec magento2-container bin/magento config:set payment/adyen_express/show_google_pay_on "1,2,3"
-docker exec magento2-container bin/magento config:set payment/adyen_express/show_apple_pay_on "1,2,3"
+docker exec magento2-container bin/magento config:set payment/adyen_applepay/express_show_on "1,2,3"
+docker exec magento2-container bin/magento config:set payment/adyen_googlepay/express_show_on "1,2,3"
 
 # Clear cache
 docker exec magento2-container bin/magento cache:flush
