@@ -2,7 +2,7 @@ version: '3'
 
 services:
   db:
-    image: mariadb:10.4
+    image: mariadb:10.6
     container_name: mariadb
     environment:
       MARIADB_ROOT_PASSWORD: root_password
@@ -12,7 +12,7 @@ services:
     networks:
       - backend
   elastic:
-    image: elasticsearch:7.16.2
+    image: elasticsearch:8.5.3
     container_name: elasticsearch
     ports:
       - 9200:9200
@@ -20,10 +20,13 @@ services:
     environment:
       - "discovery.type=single-node"
       - ES_JAVA_OPTS=-Xms750m -Xmx750m
+      - "xpack.security.enabled=false"
+      
     networks:
       - backend
   web:
-    image: ataberkylmz/magento2:2.4.4
+    build:
+      context: .
     container_name: magento2-container
     environment:
       DB_SERVER: mariadb
