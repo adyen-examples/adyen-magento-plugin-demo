@@ -19,7 +19,7 @@ services:
       USE_SSL: 1
       DEPLOY_SAMPLEDATA: 1
     ports:
-      - 8080:80
+      - 8080:8080
     depends_on:
       - db
       - opensearch
