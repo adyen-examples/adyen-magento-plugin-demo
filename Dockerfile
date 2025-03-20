@@ -1,4 +1,4 @@
-FROM acr-ext.is.adyen.com/external/nginx:1.24.0
+FROM nginx:1.24.0
 
 LABEL maintainer="Ecommerce Plugins"
 
