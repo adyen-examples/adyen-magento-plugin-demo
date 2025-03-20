@@ -58,7 +58,6 @@ fi
 cd /var/www/html
 
 VIRTUAL_HOST=8080-${HOSTNAME}.${GITPOD_WORKSPACE_CLUSTER_HOST}
-MAGENTO_HOST=${VIRTUAL_HOST}:8080
 
 if [[ -e /var/www/html/composer.lock ]]; then
 	echo "Magento 2 is already installed."
@@ -99,7 +98,7 @@ EOF
 	chmod u+x bin/magento
 
 	bin/magento setup:install \
-		--base-url="https://${MAGENTO_HOST}" \
+		--base-url="https://${VIRTUAL_HOST}" \
 		--db-host="${DB_SERVER}:${DB_PORT}" \
 		--db-name="${DB_NAME}" \
 		--db-user="${DB_USER}" \
@@ -141,7 +140,7 @@ if [ "${USE_SSL}" -eq 1 ]; then
 		echo "Use SSL is set, but SSL is already enabled."
 	else
 		bin/magento setup:store-config:set \
-			--base-url-secure="https://${MAGENTO_HOST}" \
+			--base-url-secure="https://${VIRTUAL_HOST}" \
 			--use-secure=1 \
 			--use-secure-admin=1
 		echo "SSL for Magento is configured."
