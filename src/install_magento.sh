@@ -57,6 +57,9 @@ fi
 # Change working directory to web server root
 cd /var/www/html
 
+VIRTUAL_HOST=8080-${HOSTNAME}.${GITPOD_WORKSPACE_CLUSTER_HOST}
+MAGENTO_HOST=${VIRTUAL_HOST}:8080
+
 if [[ -e /var/www/html/composer.lock ]]; then
 	echo "Magento 2 is already installed."
 else
@@ -68,7 +71,6 @@ upstream fastcgi_backend {
 
 server {
   listen 8080;
-  listen 8443 ssl;
   server_name ${VIRTUAL_HOST};
   set \$MAGE_ROOT /var/www/html;
   include /var/www/html/nginx.conf.sample;
@@ -96,10 +98,8 @@ EOF
 	chown -R www-data:www-data .
 	chmod u+x bin/magento
 
-	MAGENTO_HOST=${VIRTUAL_HOST}:8080 
-
 	bin/magento setup:install \
-		--base-url="http://${MAGENTO_HOST}" \
+		--base-url="https://${MAGENTO_HOST}" \
 		--db-host="${DB_SERVER}:${DB_PORT}" \
 		--db-name="${DB_NAME}" \
 		--db-user="${DB_USER}" \

@@ -9,12 +9,13 @@ ARG MAGENTO_VERSION
 
 ENV MAGENTO_VERSION=${MAGENTO_VERSION} \
     PHP_VERSION=${PHP_VERSION} \
-    VIRTUAL_HOST="<will be defined>" \
+    HOSTNAME="<will be defined>" \
+    GITPOD_WORKSPACE_CLUSTER_HOST="<will be defined>" \
     DB_SERVER="<will be defined>" \
     DB_PORT=3306 \
-    DB_NAME="magento" \
-    DB_USER="magento" \
-    DB_PASSWORD="magento" \
+    DB_NAME=magento \
+    DB_USER=magento \
+    DB_PASSWORD=magento \
     DB_PREFIX=m2_ \
     OPENSEARCH_SERVER="<will be defined>" \
     OPENSEARCH_PORT=9200 \
@@ -30,7 +31,6 @@ ENV MAGENTO_VERSION=${MAGENTO_VERSION} \
     MAGENTO_CURRENCY=EUR \
     MAGENTO_TZ=Europe/Amsterdam \
     DEPLOY_SAMPLEDATA=0 \
-    PHP_IDE_CONFIG=serverName=localhost \
     USE_SSL=0 \
     MAGE_ROOT=/var/www/html
 
