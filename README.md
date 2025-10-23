@@ -4,8 +4,6 @@ In this demo, you can spin up a Magento instance and install the [Adyen Payment 
 
 ## Setup
 
-If you don't want to run this demo online, then follow these steps.
-
 ### Requirements
 
 * Docker
