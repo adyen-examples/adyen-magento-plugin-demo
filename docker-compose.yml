@@ -1,6 +1,31 @@
 version: '3'
 
 services:
+  web:
+    build:
+      context: .
+      args:
+        PHP_VERSION: "8.2"
+        MAGENTO_VERSION: "2.4.7-p4"
+    container_name: magento2-container
+    environment:
+      DB_SERVER: mariadb
+      OPENSEARCH_SERVER: opensearch
+      RABBITMQ_SERVER: rabbitmq
+      HOSTNAME: ${HOSTNAME}
+      GITPOD_WORKSPACE_CLUSTER_HOST: ${GITPOD_WORKSPACE_CLUSTER_HOST}
+      ADMIN_USERNAME: ${ADMIN_USERNAME}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      USE_SSL: 1
+      DEPLOY_SAMPLEDATA: 1
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+      - opensearch
+      - rabbitmq
+    networks:
+      backend:
   db:
     image: mariadb:10.4
     container_name: mariadb
@@ -11,9 +36,9 @@ services:
       MARIADB_PASSWORD: magento
     networks:
       - backend
-  elastic:
-    image: elasticsearch:7.16.2
-    container_name: elasticsearch
+  opensearch:
+    image: bitnami/opensearch:2.11.1
+    container_name: opensearch
     ports:
       - 9200:9200
       - 9300:9300
@@ -22,24 +47,12 @@ services:
       - ES_JAVA_OPTS=-Xms750m -Xmx750m
     networks:
       - backend
-  web:
-    image: ataberkylmz/magento2:2.4.4
-    container_name: magento2-container
-    environment:
-      DB_SERVER: mariadb
-      ELASTICSEARCH_SERVER: elasticsearch
-      MAGENTO_HOST: ${APP_URL}
-      VIRTUAL_HOST: ${APP_URL}
-      ADMIN_USERNAME: ${ADMIN_USERNAME}
-      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
-      USE_SSL: 1
-      DEPLOY_SAMPLEDATA: 1
-    ports:
-      - 8080:80
-    depends_on:
-      - db
-      - elastic
+  rabbitmq:
+    image: bitnami/rabbitmq:3.12.13-debian-11-r0
+    container_name: rabbitmq
     networks:
-      backend:
+      - backend
+    ports:
+      - 15672:15672
 networks:
   backend:
