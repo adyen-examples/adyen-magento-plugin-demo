@@ -1,6 +1,6 @@
 # Adyen [Magento 2 Plugin](https://docs.adyen.com/plugins/magento-2) integration demo
 
-In this demo, you can spin up a Magento instance and install the [Adyen Payment plugin](https://marketplace.magento.com/adyen-module-payment.html) to see how it works.
+In this demo, you can spin up a Magento instance and install the [Adyen Payment plugin](https://docs.adyen.com/plugins/adobe-commerce/) to see how it works.
 
 ## Setup
 
